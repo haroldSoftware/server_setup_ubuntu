@@ -13,7 +13,7 @@ Check applications being managed by UFW <br>
 OpenSSH should be available. Make sure it is allowed <br> 
 <code>allow OpenSSH</code> <br>
 Then enable the firewall <br> 
-<code>ufw enable</code>
+<code>ufw enable</code> <br> 
 Now check the firewall status <br> 
 <code>ufw status</code> <br>
 OpenSSH for v4 and v6 should be allowed from anywhere. <br>
