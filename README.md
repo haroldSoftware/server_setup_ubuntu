@@ -20,4 +20,14 @@ OpenSSH for v4 and v6 should be allowed from anywhere. <br>
 ## Move your SSH key
 If you use SSH keys to login rather than a passphrase, then you will need to copy it from the root user's directory into the newuser's one, change the permissions with <code>cmod</code> to read and execute or 755, and change the ownership of files with <code>chown</code> <br>
 However, <code>rsync</code> can do this is one command <br>
-<code>rsync --archive --chown=newuser:newuser ~/.ssh /home/newuser </code> 
+<code>rsync --archive --chown=newuser:newuser ~/.ssh /home/newuser </code> <br>
+Don't forget to exclude the trailing slash or else you will copy the files rather than the directory. <br> 
+## Disable root login for security 
+To switch to the root user from another run <br> 
+<code>sudo -i</code> and enter your passphrase <br> 
+To disable root login, change the line <br> 
+<code>root:x:0:0:root:/root:/bin/bash</code> to <br> 
+<code>root:x:0:0:root:/root:/sbin/nologin</code> and save it. <br> 
+Another option is to chnage the line <code>PermitRootLogin yes</code> to <br>
+<code>PermitRootLogin no</code> in <code>/etc/ssh/sshd_config</code> <br> 
+Then restart the service with <code>sudo systemctl restart sshd</code> <br> 
