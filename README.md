@@ -1,5 +1,6 @@
 # Set Up Server With Ubuntu 20.04
-
+## Prerequisites 
+1) Ubuntu installed on a sevrer with a public IP Adress 
 ## SSH as Root
 Login to your public IP server as a root admin. In other Linux distros the root user may be named differently. <br> 
 <code>ssh root@xxxx.xxxx.xxxx.xxxx</code> <br>
