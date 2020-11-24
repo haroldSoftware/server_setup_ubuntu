@@ -12,7 +12,7 @@ Add sudo privileges to the user with <br>
 Check applications being managed by UFW <br> 
 <code>ufw app list</code> <br> 
 OpenSSH should be available. Make sure it is allowed <br> 
-<code>allow OpenSSH</code> <br>
+<code>ufw allow OpenSSH</code> <br>
 Then enable the firewall <br> 
 <code>ufw enable</code> <br> 
 Now check the firewall status <br> 
